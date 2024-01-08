@@ -1,4 +1,5 @@
 .header {
+    padding: 92px 0 96px;
     display: grid;
     grid-template-columns: 3fr 1fr 3fr;
     align-items: center;
