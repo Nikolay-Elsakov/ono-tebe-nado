@@ -1,1 +1,64 @@
-/* место для вашего кода */
+.header {
+    display: grid;
+    grid-template-columns: 3fr 1fr 3fr;
+    align-items: center;
+    font-size: 18px;
+}
+
+.header__menu {
+    justify-self: start;
+    padding-left: 51px;
+}
+
+.header__links-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.header__links-list-item {
+    letter-spacing: 0.18px;
+    list-style-type: circle;
+}
+.header__links-list-item_no-bullit {
+    list-style-type: none;
+}
+
+.header__link, .address-mail, .address-phone {
+    text-decoration: none;
+}
+
+.header__link_active {
+    border-bottom: 1px solid transparent;
+    letter-spacing: normal;
+}
+
+.header__logo {
+    display: block;
+    justify-self: center;
+    width: 137px;
+    height: 110px;
+}
+
+.address {
+    display: flex;
+    flex-direction: column;
+    max-width: 290px;
+    padding-right: 82px;
+    font-style: normal;
+    line-height: 1.35;
+}
+
+.address-phone,
+.address-mail {
+    display: inline-block;
+    letter-spacing: 0.18px;
+}
+
+.header__address {
+    justify-self: end;
+}
+
+.header__link, .address-phone span, .address-mail span {
+    border-bottom: 1px solid #000;
+}
