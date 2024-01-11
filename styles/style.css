@@ -1,65 +1,324 @@
+/* ---------------header--------------- */
+
 .header {
-    padding: 92px 0 96px;
-    display: grid;
-    grid-template-columns: 3fr 1fr 3fr;
-    align-items: center;
-    font-size: 18px;
+	display: grid;
+	grid-template-columns: 3fr 1fr 3fr;
+	align-items: center;
+	padding: 92px 0 91px;
+	font-size: 18px;
 }
 
 .header__menu {
-    justify-self: start;
-    padding-left: 51px;
+	justify-self: start;
+	padding-left: 51px;
 }
 
 .header__links-list {
-    display: flex;
-    justify-content: space-between;
-    gap: 32px;
+	display: flex;
+	justify-content: space-between;
+	gap: 32px;
 }
 
 .header__links-list-item {
-    letter-spacing: 0.18px;
-    list-style-type: circle;
+	letter-spacing: 0.18px;
+	list-style-type: circle;
 }
 .header__links-list-item_no-bullit {
-    list-style-type: none;
+	list-style-type: none;
 }
 
-.header__link, .address-mail, .address-phone {
-    text-decoration: none;
+.header__link {
+	border-bottom: 1px solid #000;
+	text-decoration: none;
 }
 
 .header__link_active {
-    border-bottom: 1px solid transparent;
-    letter-spacing: normal;
+	border-bottom: 1px solid transparent;
+	letter-spacing: normal;
 }
 
 .header__logo {
-    display: block;
-    justify-self: center;
-    width: 137px;
-    height: 110px;
+	display: block;
+	justify-self: center;
+	width: 137px;
 }
 
 .address {
-    display: flex;
-    flex-direction: column;
-    max-width: 290px;
-    padding-right: 82px;
-    font-style: normal;
-    line-height: 1.35;
+	display: flex;
+	flex-direction: column;
+	font-style: normal;
+	line-height: 1.35;
 }
 
-.address-phone,
-.address-mail {
-    display: inline-block;
-    letter-spacing: 0.18px;
+.address > a {
+	letter-spacing: 0.18px;
+	text-decoration-skip-ink: none;
 }
 
 .header__address {
-    justify-self: end;
+	justify-self: end;
+	padding-right: 82px;
+	max-width: 290px;
 }
 
-.header__link, .address-phone span, .address-mail span {
-    border-bottom: 1px solid #000;
+/* ---------------cover--------------- */
+
+.cover {
+	position: relative;
+	padding: 165px 50px 53px;
+	background-image: url(../images/cover.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.overlay {
+	position: absolute;
+	inset: 0;
+	background-color: rgb(0 0 0 / 0.6);
+}
+
+.cover__title {
+	position: relative;
+	z-index: 1;
+}
+
+.aligned-text {
+	display: block;
+	color: #fff;
+	font-weight: bold;
+	font-size: 100px;
+	line-height: 1.15;
+	letter-spacing: 30px;
+	text-transform: uppercase;
+}
+
+.letter-spacing-extended {
+	letter-spacing: 60px;
+}
+
+.no-letter-spacing {
+	letter-spacing: normal;
+}
+
+.aligned-text_center {
+	margin-left: -60px;
+	text-align: center;
+}
+
+.aligned-text_right {
+	text-align: right;
+}
+
+.aligned-text_center,
+.aligned-text_right {
+	margin-top: 20px;
+	line-height: 1;
+}
+
+.cover__description {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 136px;
+}
+
+.cover__description-text {
+	padding-left: 29px;
+	color: #fff;
+	font-weight: normal;
+	font-size: 22px;
+	line-height: 1.27;
+	text-transform: uppercase;
+	word-spacing: 18px;
+}
+
+.bet-button {
+	border: 1px solid #fff;
+	padding: 11px 31px;
+	color: #fff;
+	font-family: Raleway, sans-serif;
+	font-weight: normal;
+	font-size: 22px;
+	text-align: center;
+	text-transform: uppercase;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+/* ---------------lots--------------- */
+
+.lots {
+	padding: 178px 24px 146px;
+}
+
+.lots__heading {
+	padding-left: 40px;
+}
+.section-title {
+	font-size: 40px;
+	text-transform: uppercase;
+}
+
+.lots__card-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 25px;
+	margin-top: 27px;
+	list-style-type: none;
+}
+
+.lots__card-list-item {
+	flex-grow: 1;
+	width: 334px;
+	min-height: 563px;
+}
+
+.card-link {
+	display: block;
+	height: 100%;
+	text-decoration: none;
+}
+
+.card {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-height: 100%;
+	padding: 51px 40px 48px;
+	color: #fff;
+	font-size: 20px;
+	line-height: 1.2;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.card_type_film {
+	background: url(../images/card-lot-01.jpg);
+}
+
+.card_type_book {
+	background: url(../images/card-lot-02.jpg);
+}
+
+.card_type_picture {
+	background: url(../images/card-lot-03.jpg);
+}
+.card_type_film,
+.card_type_book,
+.card_type_picture {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.card__title,
+.card__text {
+	position: relative;
+	z-index: 1;
+}
+
+.card__title {
+	font-size: 22px;
+	text-decoration-line: underline;
+	text-decoration-skip-ink: none;
+	text-transform: uppercase;
+}
+
+.lots__look-more-link {
+	display: inline-block;
+	margin-top: 30px;
+	padding-left: 40px;
+	font-size: 20px;
+	text-decoration-skip-ink: none;
+}
+
+/* ---------------about--------------- */
+
+.about {
+	padding: 35px 24px 92px;
+}
+
+.about__column {
+	display: grid;
+	grid-template-columns: 334px auto;
+	grid-template-rows: 240px auto;
+	align-items: center;
+	column-gap: 25px;
+}
+
+.about__logo {
+	display: flex;
+	justify-self: center;
+	justify-content: center;
+	align-items: center;
+	width: 240px;
+	height: 240px;
+	border-radius: 50%;
+	background-color: #000;
+}
+
+.about__logo img {
+	width: 148px;
+}
+
+.about__text {
+	display: flex;
+	flex-direction: column;
+	grid-column: 2/3;
+	grid-row: 2/3;
+	gap: 24px;
+	padding-top: 8px;
+	font-size: 20px;
+	line-height: 1.2;
+	letter-spacing: 0.2px;
+}
+
+/* ---------------footer--------------- */
+
+.footer {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	padding: 88px 50px;
+	font-size: 18px;
+}
+
+.footer__address {
+	justify-self: start;
+	max-width: 230px;
+}
+
+.footer__menu {
+	justify-self: center;
+}
+
+.footer__menu-list {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	list-style-type: none;
+}
+
+.footer__menu-link {
+	border-bottom: 1px solid black;
+	text-decoration: none;
+}
+
+.footer__menu-link_active {
+	border-bottom: 1px solid transparent;
+}
+
+.footer__social-icon {
+	width: 48px;
+}
+
+.footer__social-list {
+	display: flex;
+	justify-self: end;
+	justify-content: space-between;
+	gap: 48px;
+	list-style-type: none;
 }
