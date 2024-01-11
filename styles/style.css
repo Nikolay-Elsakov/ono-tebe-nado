@@ -78,7 +78,7 @@
 	background-color: rgb(0 0 0 / 0.6);
 }
 
-.cover__title {
+.cover__title, .cover__description {
 	position: relative;
 	z-index: 1;
 }
